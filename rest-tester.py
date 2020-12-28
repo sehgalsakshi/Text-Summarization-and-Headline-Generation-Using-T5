@@ -9,7 +9,7 @@ class TestRestApi(unittest.TestCase):
     """
     This class runs some mandatory unit tests to check the performance of rest api.
     """
-    # check valid status code (200) and json response
+    # check valid status code (200)
     def test_valid_upload(self):
         filename = 'sample.pdf'
         fileobj = open(filename, 'rb')
@@ -22,7 +22,7 @@ class TestRestApi(unittest.TestCase):
         response = tester.post('/proccess_pdf', data=data, headers=headers)
         assert response.status_code == 200
     
-    # check valid status code (200) and json response
+    # check 400 status code (200) for uploading a heavy file
     def test_size_constraints_upload(self):
         filename = 'sample.pdf'
         fileobj = open(filename, 'rb')
