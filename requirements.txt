@@ -1,0 +1,12 @@
+Flask
+PyPDF2
+textract
+nltk
+Image
+transformers
+sentencepiece
+pdfkit
+texthero
+matplotlib
+pycairo
+torch == 1.7.0
